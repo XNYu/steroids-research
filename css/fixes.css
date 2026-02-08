@@ -1,0 +1,116 @@
+/* Table fixes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: table !important;
+}
+
+thead {
+    display: table-header-group;
+}
+
+tbody {
+    display: table-row-group;
+}
+
+tr {
+    display: table-row;
+}
+
+th, td {
+    display: table-cell;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    width: auto;
+}
+
+th {
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4a 100%);
+    color: white;
+    font-weight: 600;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+tr:hover td {
+    background: #eef2ff;
+}
+
+/* TOC Navigation */
+.toc {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.toc h3 {
+    color: #1a1a2e;
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+}
+
+.toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+
+.toc li {
+    margin: 0;
+}
+
+.toc a {
+    color: #4a5568;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    display: block;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.toc a:hover {
+    background: #e94560;
+    color: white;
+}
+
+/* Section anchors */
+.section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 2rem;
+}
+
+.section-nav a {
+    background: #e94560;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.section-nav a:hover {
+    background: #1a1a2e;
+    transform: translateY(-2px);
+}
