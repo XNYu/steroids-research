@@ -1,0 +1,183 @@
+/* Quote/User Review Styling */
+.reviews-section {
+    margin: 2rem 0;
+}
+
+.reviews-section h2 {
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.review-quote {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border-left: 4px solid #e94560;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+    border-radius: 0 12px 12px 0;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.review-quote:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 15px rgba(233,69,96,0.15);
+}
+
+.review-quote::before {
+    content: "❝";
+    font-size: 1.5rem;
+    color: #e94560;
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    opacity: 0.5;
+}
+
+.review-quote p {
+    margin: 0;
+    font-style: italic;
+    color: #4a5568;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.review-quote .source {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: #a0aec0;
+    font-style: normal;
+    text-align: right;
+}
+
+.review-quote .source::before {
+    content: "— ";
+}
+
+/* Word Cloud Styling */
+.wordcloud-section {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.wordcloud-section h2 {
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.word-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    min-height: 200px;
+}
+
+.word-cloud .word {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.word-cloud .word:hover {
+    transform: scale(1.1);
+}
+
+.word-cloud .word.size-1 { font-size: 0.75rem; opacity: 0.7; }
+.word-cloud .word.size-2 { font-size: 0.85rem; opacity: 0.8; }
+.word-cloud .word.size-3 { font-size: 1rem; opacity: 0.85; }
+.word-cloud .word.size-4 { font-size: 1.2rem; font-weight: 500; }
+.word-cloud .word.size-5 { font-size: 1.5rem; font-weight: 600; }
+.word-cloud .word.size-6 { font-size: 1.8rem; font-weight: 700; }
+
+.word-cloud .word.negative { background: #fed7d7; color: #c53030; }
+.word-cloud .word.positive { background: #c6f6d5; color: #276749; }
+.word-cloud .word.neutral { background: #e2e8f0; color: #4a5568; }
+.word-cloud .word.warning { background: #feebc8; color: #c05621; }
+
+/* In-page Navigation */
+.page-nav {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.page-nav h4 {
+    color: white;
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.page-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.page-nav li {
+    margin: 0;
+}
+
+.page-nav a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.page-nav a:hover {
+    background: #e94560;
+    color: white;
+}
+
+.page-nav .section-group {
+    margin-bottom: 0.75rem;
+}
+
+.page-nav .section-group:last-child {
+    margin-bottom: 0;
+}
+
+.page-nav .section-label {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+/* Quote grid for multiple reviews */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 500px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}
